@@ -55,7 +55,7 @@ namespace Kalkulacka2._0
             else if (firstValue != null && secondValue == null)
             {
                 firstValueCompleted = true;
-                TextovéPole.Text = null;
+
             }
         }
 
@@ -85,6 +85,10 @@ namespace Kalkulacka2._0
         {
 
             Equals();
+            if (firstValue != null && secondValue == null)
+            {
+                TextovéPole.Text = null;
+            }
             calculationOperator = (sender as Button).Text;
         }
 
