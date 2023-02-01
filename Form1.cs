@@ -84,11 +84,12 @@ namespace Kalkulacka2._0
         private void Operator(object sender, EventArgs e)
         {
 
-            Equals();
+            
             if (firstValue != null && secondValue == null)
             {
                 TextovéPole.Text = null;
             }
+            Equals();
             calculationOperator = (sender as Button).Text;
         }
 
@@ -106,15 +107,15 @@ namespace Kalkulacka2._0
         {
             if (firstValueCompleted == false)
             {
-                if (firstValue.Length > 0)
+                if (firstValue.Length > 0 && firstValue != null)
                 {
                     firstValue = firstValue.Remove(firstValue.Length - 1);
                 }
                 TextovéPole.Text = firstValue;
             }
-            else
+            else if (firstValueCompleted ==true && secondValue != null)
             {
-                if (secondValue.Length > 0)
+                if (secondValue.Length > 0 && secondValue != null)
                 {
                     secondValue = secondValue.Remove(secondValue.Length - 1);
                 }
